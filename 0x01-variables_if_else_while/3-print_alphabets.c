@@ -3,23 +3,20 @@
 #include <time.h>
 
 /**
- * main - Entry point
+ * main - entry point
  *
- * Description: prints the alphabet in lowercase and uppercase
+ * Description: print lowercase then uppercase
  *
  * Return: Always 0 (Success)
 */
 int main(void)
 {
-char letter;
-for (letter = 'a'; letter <= 'z'; letter++)
+char alp[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+int i;
+
+for (i = 0; i < 52; i++)
 {
-putchar(letter);
-}
-char letterup;
-for (letterup = 'A'; letterup <= 'Z'; letterup++)
-{
-putchar(letterup);
+putchar(alp[i]);
 }
 putchar('\n');
 return (0);
