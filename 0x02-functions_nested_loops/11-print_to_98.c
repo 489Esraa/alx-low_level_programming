@@ -2,8 +2,8 @@
 #include "main.h"
 
 /*
- * print_to_98 - numbers from n to 98, followed by a new line.
- *
+ * print_to_98 - numbers from n to 98,
+ * followed by a new line.
  * @n: int to count to 98
 */
 void print_to_98(int n)
