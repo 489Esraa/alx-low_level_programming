@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * add - adds two integers and returns the result
+ * @a: int to be added to b
+ * @b: int to be added to a
+ * Return: sum of a and b
 */
-int add(int x , int y)
+int add(int a, int b)
 {
-int sum = x + y;
+int sum = a + b;
 return (sum);
 }
