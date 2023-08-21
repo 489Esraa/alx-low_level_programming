@@ -1,17 +1,14 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * more_numbers - prints more numbers
- *
- * return: void
- *
+ * more_numbers - prints more number
 */
 void more_numbers(void)
 {
-for (int i = 1; i <= 10; i++)
+int i, r;
+for (i = 1; i <= 10; i++)
 {
-for (int r = 0; r <= 14; r++)
+for (r = 0; r <= 14; r++)
 {
 if (r >= 10)
 {
