@@ -30,7 +30,7 @@ int i;
 int size = _strlen(str);
 
 char *ptr = (char *)malloc((size + 1) * sizeof(char));
-if (str ==NULL)
+if (ptr == NULL)
 return NULL;
 for (i = 0; i <= size; i++)
 {
