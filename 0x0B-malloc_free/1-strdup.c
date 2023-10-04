@@ -26,24 +26,22 @@ return (longi);
 */
 char *_strdup(char *str)
 {
-int i;
-int size = _strlen(str);
-
-char *ptr = malloc((size + 1) * sizeof(char));
-if (ptr == NULL)
-{
-return (NULL);
-}
+int i = 0, size = 0;
+char *p;
 if (str == NULL)
-{
 return (NULL);
-}
+while (str[size] != '\0')
+size++;
+p = malloc(size *sizeof(*str) + 1);
+if (p == 0)
+return (NULL);
 else
 {
-for (i = 0; i <= size; i++)
+while (i < size)
 {
-*(ptr + i) = str[i];
+p[i] = str[i];
+i++;
 }
 }
-return (ptr);
+return (p);
 }
