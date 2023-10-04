@@ -12,12 +12,16 @@
 char *create_array(unsigned int size, char c)
 {
 char *str;
-unsigned int i;
+int x;
 
-str = malloc(sizeof(char) * size);
+str = malloc(size);
 if (size == 0 || str == NULL)
-return (NULL);
-for (i = 0; i < size; i++)
-str[i] = c;
+{
+return (0);
+}
+for (x = 0; x < size; x++)
+{
+str[x] = c;
+}
 return (str);
 }
