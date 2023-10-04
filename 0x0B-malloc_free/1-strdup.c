@@ -30,9 +30,13 @@ int i;
 int size = _strlen(str);
 
 char *ptr = malloc((size + 1) * sizeof(char));
-if (ptr == 0)
+if (ptr == NULL)
 {
-return (0);
+return (NULL);
+}
+if (str == NULL)
+{
+return (NULL);
 }
 else
 {
