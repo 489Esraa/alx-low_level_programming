@@ -31,7 +31,7 @@ int size = _strlen(str);
 
 char *ptr = (char *)malloc((size + 1) * sizeof(char));
 if (ptr == 0)
-return (NULL);
+return (0);
 for (i = 0; i <= size; i++)
 {
 *(ptr + i) = str[i];
