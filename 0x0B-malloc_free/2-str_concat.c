@@ -18,11 +18,11 @@ size1 = strlen(s1);
 size2 = strlen(s2);
 if (s1 == NULL || s2 == NULL)
 {
-return ("");
+return ("\0");
 }
 size1 = strlen(s1);
 size2 = strlen(s2);
-char *ptr = (char *)malloc((size1 + size2 + 1) * sizeof(char));
+char *ptr = (char *)malloc((size1 + size2) * sizeof(char) + 1);
 if (ptr == NULL)
 {
 return (NULL);
