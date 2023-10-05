@@ -18,13 +18,20 @@ int size1 = strlen(s1);
 int size2 = strlen(s2);
 
 char *ptr = (char *)malloc((size1 + size2 + 1) * sizeof(char));
-if (s1 == NULL || s2 == NULL || ptr == NULL)
+if (ptr == NULL)
 {
 return (NULL);
 }
+if (s1 == NULL || s2 == NULL)
+{
+return ("");
+}
+else
+{
 for (x = 0; x < size1; x++)
 ptr[x] = s1[x];
 for (a = 0; a <= size2; a++)
 ptr[size1 + a] = s2[a];
+}
 return (ptr);
 }
