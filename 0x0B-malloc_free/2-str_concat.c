@@ -14,17 +14,18 @@
 char *str_concat(char *s1, char *s2)
 {
 int a, x;
-int size1 = strlen(s1);
-int size2 = strlen(s2);
-
+size1 = strlen(s1);
+size2 = strlen(s2);
+if (s1 == NULL || s2 == NULL)
+{
+return ("");
+}
+size1 = strlen(s1);
+size2 = strlen(s2);
 char *ptr = (char *)malloc((size1 + size2 + 1) * sizeof(char));
 if (ptr == NULL)
 {
 return (NULL);
-}
-if (s1 == NULL || s2 == NULL)
-{
-return ("");
 }
 else
 {
