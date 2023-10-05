@@ -27,12 +27,12 @@ if (ptr == NULL)
 {
 return (NULL);
 }
-else
-{
 for (x = 0; x < size1; x++)
 ptr[x] = s1[x];
 for (a = 0; a <= size2; a++)
+{
 ptr[size1 + a] = s2[a];
 }
+ptr[a] = '\0';
 return (ptr);
 }
