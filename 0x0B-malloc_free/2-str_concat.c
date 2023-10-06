@@ -17,9 +17,13 @@ int a, x;
 int size1 = 0,size2 = 0;
 char *ptr;
 
-if (s1 == NULL || s2 == NULL)
+if (s1 == NULL)
 {
-return ("\0");
+s1 = "\0";
+}
+if (s2 == NULL)
+{
+s2 = "\0";
 }
 size1 = strlen(s1);
 size2 = strlen(s2);
