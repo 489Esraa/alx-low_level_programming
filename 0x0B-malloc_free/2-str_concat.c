@@ -14,20 +14,16 @@
 char *str_concat(char *s1, char *s2)
 {
 int a, x;
-int size1 = 0,size2 = 0;
+int size1 = 0, size2 = 0;
 char *ptr;
 
 if (s1 == NULL)
-{
 s1 = "\0";
-}
 if (s2 == NULL)
-{
 s2 = "\0";
-}
 size1 = strlen(s1);
 size2 = strlen(s2);
-ptr = (char *)malloc((size1 + size2) * sizeof(char) + 1);
+ptr = (char *)malloc((size1 + size2) *sizeof(char) + 1);
 if (ptr == NULL)
 {
 return (NULL);
@@ -38,6 +34,5 @@ for (a = 0; a <= size2; a++)
 {
 ptr[size1 + a] = s2[a];
 }
-ptr[a] = '\0';
 return (ptr);
 }
