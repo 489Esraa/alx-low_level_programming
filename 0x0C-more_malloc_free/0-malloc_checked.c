@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include "stdlib.h"
+#include <stdlib.h>
 
 /**
  * malloc_checked - calls exit on failure
