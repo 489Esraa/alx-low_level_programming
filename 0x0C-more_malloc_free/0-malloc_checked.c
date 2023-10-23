@@ -2,16 +2,17 @@
 #include <stdlib.h>
 
 /**
- * malloc_checked - calls exit on failure
- * @b: number of bytes to allocate
- *
- * Return: void
+ * *malloc_checked - that allocates memory using malloc
+ * @b: integer parameter
+ * Return: poiner to the array initialized or NULL
  */
+
 void *malloc_checked(unsigned int b)
 {
-	void *p = malloc(b);
+	int *m = malloc(b);
 
-	if (!p)
+	if (m == 0)
 		exit(98);
-	return (p);
+
+	return (m);
 }
