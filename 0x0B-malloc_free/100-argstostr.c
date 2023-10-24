@@ -1,47 +1,39 @@
 #include "main.h"
+#include <stdlib.h>
+
 /**
-* _strlen - returns the length of string
-* @str : string
-* Return: int
-*/
-int _strlen(char *str)
-{
-int size = 0;
-while (str[size] != '\0')
-size++;
-return (size);
-}
-/**
-* argstostr -  concatenates all the arguments of your program
-* @ac : integer
-* @av : pointer to pointer of char
-* Return: pointer to the array
+ * argstostr - main entry
+ * @ac: int input
+ * @av: double pointer array
+ * Return: 0
 */
 char *argstostr(int ac, char **av)
 {
-int i = 0, nc = 0, j = 0, cmpt = 0;
-char *s;
-if (ac == 0 || av == 0)
-return (NULL);
-while (i < ac)
-{
-nc += _strlen(av[i]);
-nc++;
-i++;
-}
-s = malloc(sizeof(*s) * nc + 1);
-if (s == 0)
+int i, n, r = 0, l = 0;
+char *str;
+
+if (ac == 0 || av == NULL)
 return (NULL);
 for (i = 0; i < ac; i++)
 {
-for (j = 0; av[i][j] != '\0'; j++)
+for (n = 0; av[i][n]; n++)
+l++;
+}
+l += ac;
+str = malloc(sizeof(char) * l + 1);
+if (str == NULL)
+return (NULL);
+for (i = 0; i < ac; i++)
 {
-s[cmpt] = av[i][j];
-cmpt++;
+for (n = 0; av[i][n]; n++)
+{
+str[r] = av[i][n];
+r++;
 }
-s[cmpt] = '\n';
-cmpt++;
+if (str[r] == '\0')
+{
+str[r++] = '\n';
 }
-s[cmpt] = '\0';
-return (s);
+}
+return (str);
 }
