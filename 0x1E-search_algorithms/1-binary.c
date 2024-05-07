@@ -6,8 +6,9 @@
  * @size: size of array
  * @value: int value we are looking for
  * Return: Always EXIT_SUCCESS
- */
-int binary_search(int *array, size_t size, int value){
+*/
+int binary_search(int *array, size_t size, int value)
+{
     size_t i, l, h, mid;
 
     l = 0;
@@ -22,7 +23,7 @@ int binary_search(int *array, size_t size, int value){
             if(i != h)
                 printf(", ");
             else
-            printf('\n');
+            printf("\n");
         }
     mid = (h + l) / 2;
     if (array[mid] == value)
