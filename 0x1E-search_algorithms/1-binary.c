@@ -19,7 +19,7 @@ int binary_search(int *array, size_t size, int value)
     {
         for(i = l; i <= h; i++)
         {
-            printf("Searching in array: [%d]", array[i]);
+            printf("Searching in array: %d", array[i]);
             if(i != h)
                 printf(", ");
             else
